@@ -38,7 +38,7 @@ def bowling(scores)
           # 次の投球の加算処理
           sum += scores[index + 2][0]
         else
-          # 次の投球の加算処
+          # 次の投球の加算処理
           sum += scores[index + 1][1]
         end
       end
