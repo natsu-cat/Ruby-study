@@ -3,7 +3,7 @@ require './lib/gate'
 require './lib/ticket'
 
 class GateTest < Minitest::Test
-  #テストメソッドが実行される前にこのメソッドが毎回呼ばれる
+  # テストメソッドが実行される前にこのメソッドが毎回呼ばれる
   def setup
     @umeda = Gate.new(:umeda)
     @juso = Gate.new(:juso)
