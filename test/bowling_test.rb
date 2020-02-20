@@ -18,4 +18,16 @@ class BowlingTest < Minitest::Test
     scores = [ [10, 0], [10, 0], [6, 4], [8, 2], [0, 6], [10, 0], [9, 1], [10, 0], [9, 1], [2, 6] ]
     assert_equal 160, bowling(scores)
   end
+
+  def test_bowling_4
+    # パーフェクトゲーム、10フレーム目の3投目追加
+    scores = [ [10, 0], [10, 0], [10, 0], [10, 0], [10, 0], [10, 0], [10, 0], [10, 0], [10, 0], [10, 10, 10] ]
+    assert_equal 300, bowling(scores)
+  end
+
+  def test_bowling_5
+    # 1~4の組み合わせ
+    scores = [ [0, 0], [10, 0], [10, 0], [10, 0], [9, 1], [3, 7], [0, 10], [8, 0], [10, 0], [4, 6, 10] ]
+    assert_equal 168, bowling(scores)
+  end
 end
