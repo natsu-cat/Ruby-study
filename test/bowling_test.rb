@@ -12,4 +12,10 @@ class BowlingTest < Minitest::Test
     scores = [ [0, 3], [2, 6], [4, 6], [3, 5], [10, 0], [2, 2], [7, 1], [9, 1], [0, 0], [2, 6] ]
     assert_equal 76, bowling(scores)
   end
+
+  def test_bowling_3
+    # 連続スペア、連続ストライク追加
+    scores = [ [10, 0], [10, 0], [6, 4], [8, 2], [0, 6], [10, 0], [9, 1], [10, 0], [9, 1], [2, 6] ]
+    assert_equal 160, bowling(scores)
+  end
 end
