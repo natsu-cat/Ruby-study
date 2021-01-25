@@ -20,5 +20,11 @@ class WordSynthTest < Minitest::Test
     synth.add_effect(Effects.loud(3))
     synth.add_effect(Effects.reverse)
     assert_equal '!!!YYBBUURR !!!SSII !!!!!NNUUFF', synth.play('Ruby is fun!')
+
+    synth = WordSynth.new
+    synth.add_effect(Effects.loud(3))
+    synth.add_effect(Effects.reverse)
+    synth.add_effect(Effects.echo(3))
+    assert_equal '!!!!!!!!!YYYBBBUUURRR !!!!!!!!!SSSIII !!!!!!!!!!!!NNNUUUFFF', synth.play('Ruby is fun!')
   end
 end
